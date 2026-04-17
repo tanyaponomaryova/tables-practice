@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --bg-color: rgb(64, 64, 144);
+  --data-color: rgb(255, 136, 186);
+  --table-header-color: white;
+}
+
+* {
+  font-family: "EB Garamond";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  position: relative;
+  background-color: var(--bg-color);
+  color: var(--data-color);
+
+  overflow-x: hidden;
+
+  padding-bottom: 32px;
+}
+
+::selection {
+  background-color: var(--table-header-color);
+}
+
+body::after {
+  content: "";
+  /* background-image: url(img/maket.png); */
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 32px;
+}
+
+.tags {
+  display: flex;
+  gap: 20px;
+  margin: 0px 32px;
+}
+
+.tags button {
+  background: none;
+  border: none;
+  color: var(--data-color);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.tags > :first-child {
+  color: var(--table-header-color);
+}
+
+table {
+  width: calc(100vw - 32px * 2);
+
+  margin-top: 28px;
+  margin-left: 32px;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th {
+  color: var(--table-header-color);
+}
+
+th,
+td {
+  font-weight: 600;
+  font-size: 18px;
+
+  padding: 6px 10px;
+
+  border: 1px solid var(--data-color);
+  border-bottom: none;
+}
+
+tr > :first-child {
+  border-left: none;
+}
+
+tr > :last-child {
+  border-right: none;
+}
+
+thead > :first-child > * {
+  border-top: none;
+  border-color: var(--table-header-color);
+}
+
+/* tbody > :last-child > * {
+  border-bottom: none;
+} */
+
+/* запятые */
+tr > :nth-child(3) > :not(:last-child)::after {
+  content: ",";
+}
