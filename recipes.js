@@ -32,13 +32,13 @@ rows.forEach((row) => {
 
 // Фильтрация
 // Собираем все уникальные теги из таблице
-const allTagsInTable = new Set();
+// const allTagsInTable = new Set();
 
-rows.forEach((row) => {
-  const tags = row.querySelectorAll("td:nth-child(3) span");
+// rows.forEach((row) => {
+//   const tags = row.querySelectorAll("td:nth-child(3) span");
 
-  tags.forEach((tag) => allTagsInTable.add(tag));
-});
+//   tags.forEach((tag) => allTagsInTable.add(tag));
+// });
 
 const buttons = document.querySelectorAll(".tags button");
 
